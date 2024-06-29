@@ -1,14 +1,14 @@
 {application, calculator,
  [{description, "An OTP application"},
   {vsn, "0.1.0"},
-  {registered, []},
+  {registered, [calculator_supervisor, calculator_server]},
   {mod, {calculator_app, []}},
   {applications,
    [kernel,
     stdlib
    ]},
   {env,[]},
-  {modules, []},
+  {modules, [calculator, calculator_sup, calculator_server]},
 
   {licenses, ["Apache-2.0"]},
   {links, []}
